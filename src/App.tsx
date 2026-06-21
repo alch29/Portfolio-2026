@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+
 function App() {
-  return <h1>My React Portfolio!</h1>
+  return (
+    <>
+      <Header></Header>
+    </>
+  )
 }
 
 export default App;

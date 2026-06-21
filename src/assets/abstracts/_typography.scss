@@ -1,0 +1,59 @@
+@use 'variables' as vars;
+
+h1 {
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-size: 38px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Ibarra Real Nova", serif;
+    font-optical-sizing: auto;
+    font-size: 34px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Golos Text", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Golos Text", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header__menu-items li {
+    font-family: "Golos Text", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (min-width: vars.$tablet-breakpoint) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    p {
+        font-size: 16px; 
+    }
+}
