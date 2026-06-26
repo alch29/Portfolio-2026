@@ -8,14 +8,23 @@ function Header() {
     const menuItems = ['Hjem', 'Portfolio', 'Om mig', 'Kontakt'];
 
     return (
-        <header>
-            <div className="header">
+        <header className="header">
+            <div className="header__content">
                 <div className="header__logo">
                     <img src={logo} alt="Logo Aleksandra Christensen" />
                     <div>
                         <p>Aleksandra <br></br> Christensen</p>
                     </div>
                 </div>
+                <nav className="header__nav--wide">
+                    <ul className="header__menu-items">
+                        {menuItems.map((item) => (
+                            <li key={item} onClick={() => setIsMenuOpen(false)}>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
                 <button
                     className="header__burger"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}

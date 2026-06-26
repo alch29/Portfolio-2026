@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+
+.button {
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &--primary {
+        background-color: $color-coral;
+        color: $color-text-red;
+
+        &:hover {
+            background-color: $color-coral-dark;
+        }
+    }
+
+    &--secondary {
+        background-color: $color-yellow;
+        color: $color-text-blue;
+
+        &:hover {
+            background-color: $color-yellow-dark;
+        }
+    }
+}

@@ -2,12 +2,15 @@
 
 .header {
     background-color: $color-coral;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 14px 38px;
     border-bottom: solid 1px $color-text-red;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 16px 8%;
+    }
 
     &__logo {
         display: flex;
@@ -28,14 +31,22 @@
         background: none;
         border: none;
         cursor: pointer;
+
+        & img {
+            width: 26px;
+        }
     }
     
     &__nav {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: 0.3s ease-in;
     }
 
     &__nav--open {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
         padding: 38px;
         display: flex;
         align-items: flex-start;
@@ -77,6 +88,36 @@
             &:hover::after {
                 transform: scaleX(1);
             }
+        }
+    }
+
+    &__nav--wide {
+        display: none;
+    }
+}
+
+@media (min-width: $tablet-breakpoint) {
+    .header {
+
+        &__nav--wide {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &__menu-items {
+            flex-direction: row;
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__nav--open {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            padding: 0;
         }
     }
 }
